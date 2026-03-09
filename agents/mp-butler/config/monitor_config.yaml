@@ -1,0 +1,121 @@
+# AI 动态监控配置
+# 深度解读型内容生成
+
+monitoring:
+  interval_minutes: 30
+  content_style: "deep_analysis"  # deep_analysis | quick_news
+  
+# 监控账号列表（13个）
+accounts:
+  # === 公司官方账号 ===
+  - username: "OpenAI"
+    type: "company"
+    priority: "high"
+    keywords: ["model", "gpt", "api", "release", "launch", "announce", "update", "paper", "research"]
+    min_likes: 500
+    
+  - username: "GoogleAI"
+    type: "company"
+    priority: "high"
+    keywords: ["gemini", "model", "ai", "research", "paper", "launch", "update", "bard"]
+    min_likes: 500
+    
+  - username: "AnthropicAI"
+    type: "company"
+    priority: "high"
+    keywords: ["claude", "model", "ai", "safety", "research", "paper", "release", "update"]
+    min_likes: 300
+    
+  - username: "AIatMeta"
+    type: "company"
+    priority: "medium"
+    keywords: ["llama", "model", "ai", "research", "open source", "paper", "release"]
+    min_likes: 300
+    
+  - username: "MicrosoftAI"
+    type: "company"
+    priority: "medium"
+    keywords: ["copilot", "azure", "ai", "model", "research", "release", "update"]
+    min_likes: 300
+    
+  # === 技术领袖 ===
+  - username: "sama"
+    type: "person"
+    priority: "high"
+    keywords: ["ai", "agi", "openai", "model", "future", "intelligence", "safety", "policy"]
+    min_likes: 1000
+    
+  - username: "karpathy"
+    type: "person"
+    priority: "high"
+    keywords: ["ai", "llm", "neural", "learning", "model", "research", "education", "code"]
+    min_likes: 800
+    
+  - username: "ylecun"
+    type: "person"
+    priority: "high"
+    keywords: ["ai", "llm", "learning", "model", "research", "meta", "jepa", "world model"]
+    min_likes: 800
+    
+  - username: "demishassabis"
+    type: "person"
+    priority: "medium"
+    keywords: ["ai", "deepmind", "research", "science", "model", "alphafold", "agi"]
+    min_likes: 500
+    
+  - username: "drfeifei"
+    type: "person"
+    priority: "medium"
+    keywords: ["ai", "research", "ethics", "policy", "education", "human-centered"]
+    min_likes: 500
+    
+  # === 新增监控账号 ===
+  - username: "steipete"
+    type: "person"
+    priority: "medium"
+    keywords: ["openclaw", "ai", "code", "developer", "tool", "productivity"]
+    min_likes: 100
+    
+  - username: "realDonaldTrump"
+    type: "person"
+    priority: "high"
+    keywords: ["ai", "tech", "policy", "america", "future", "business"]
+    min_likes: 5000
+    
+  - username: "elonmusk"
+    type: "person"
+    priority: "high"
+    keywords: ["ai", "tesla", "xai", "neuralink", "spacex", "tech", "future", "robot", "autopilot"]
+    min_likes: 5000
+
+# 内容过滤规则
+filter:
+  # 排除关键词（低质量内容）
+  exclude_keywords: ["thanks", "congratulations", "happy", "birthday", "weekend", "lunch"]
+  # 必须包含的最低互动数
+  min_engagement:
+    high_priority: 500
+    medium_priority: 300
+    person_high: 1000
+    person_medium: 500
+  # 内容长度要求（字符数）
+  min_content_length: 50
+
+# 文章生成配置
+article_generation:
+  style: "深度解读型"
+  structure:
+    - "导语：一句话概括核心事件"
+    - "背景：这个发布/观点的重要性"
+    - "核心内容：详细解读"
+    - "行业影响：对AI领域的意义"
+    - "延伸阅读：相关链接"
+  max_length: 2000  # 中文字数
+  include_translation: true
+  include_opinion: true  # 添加解读观点
+
+# 存储路径
+storage:
+  processed_tweets: "data/processed_tweets.json"
+  generated_articles: "data/articles/"
+  logs: "data/logs/"

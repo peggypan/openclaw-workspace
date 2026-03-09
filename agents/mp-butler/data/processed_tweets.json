@@ -1,0 +1,904 @@
+{
+  "2029627696314208257#m": {
+    "time": "2026-03-06T13:23:24.069780",
+    "account": "sama",
+    "important": false
+  },
+  "2029623948980416681#m": {
+    "time": "2026-03-06T13:23:24.069800",
+    "account": "sama",
+    "important": false
+  },
+  "2029622090152956335#m": {
+    "time": "2026-03-06T13:23:24.070023",
+    "account": "sama",
+    "important": true,
+    "title": "【🔴 重磅】Sam Altman最新动态：RT by @sama: GPT-5.4 is a big step up in computer ..."
+  },
+  "2029650046002811280#m": {
+    "time": "2026-03-06T13:23:26.567371",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🔴 重磅】OpenAI最新动态：We're publishing a new evaluation suite and resear..."
+  },
+  "2029620624923189283#m": {
+    "time": "2026-03-06T13:23:26.568579",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🔴 重磅】OpenAI最新动态：R to @OpenAI: GPT-5.4 Thinking and Pro are rolling..."
+  },
+  "2029620623199326334#m": {
+    "time": "2026-03-06T13:23:26.569682",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🔴 重磅】OpenAI最新动态：R to @OpenAI: GPT-5.4 is our most factual and effi..."
+  },
+  "2028982664389116051#m": {
+    "time": "2026-03-06T13:23:29.075539",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：R to @GoogleAI: Second, using 3.1 Flash-Lite in @G..."
+  },
+  "2028982662061265371#m": {
+    "time": "2026-03-06T13:23:29.076824",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：Here are a couple examples of how Gemini 3.1 Flash..."
+  },
+  "2028873514237726945#m": {
+    "time": "2026-03-06T13:23:29.077530",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：R to @GoogleAI: Learn more about Gemini 3.1 Flash ..."
+  },
+  "2029719864533721481#m": {
+    "time": "2026-03-06T13:23:31.591536",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟠 重要】Anthropic最新动态：Pinned: A statement from Anthropic CEO Dario Amode..."
+  },
+  "2027555481699446918#m": {
+    "time": "2026-03-06T13:23:31.592675",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟠 重要】Anthropic最新动态：A statement on the comments from Secretary of War ..."
+  },
+  "2027150818575528261#m": {
+    "time": "2026-03-06T13:23:31.593520",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟠 重要】Anthropic最新动态：A statement from Anthropic CEO, Dario Amodei, on o..."
+  },
+  "2026266818789454057#m": {
+    "time": "2026-03-06T13:23:34.856931",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🟡 关注】Meta AI最新动态：Meta 🤝 AMD\n\nToday we’re announcing a multi-year ag..."
+  },
+  "2024631824304022000#m": {
+    "time": "2026-03-06T13:23:34.857911",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🔴 重磅】Meta AI最新动态：ICYMI: @alexandr_wang spoke at the India AI Impact..."
+  },
+  "2024261696999870661#m": {
+    "time": "2026-03-06T13:23:34.858971",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🟡 关注】Meta AI最新动态：Our Chief AI Officer @alexandr_wang will take the ..."
+  },
+  "2027111503003107377#m": {
+    "time": "2026-03-06T13:23:37.375161",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🟡 关注】Microsoft AI最新动态：RT by @MicrosoftAI: We've been working on a whole ..."
+  },
+  "2015825111769841744#m": {
+    "time": "2026-03-06T13:23:37.377494",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🟡 关注】Microsoft AI最新动态：RT by @MicrosoftAI: It's a big day. Our Superintel..."
+  },
+  "1998833489333100814#m": {
+    "time": "2026-03-06T13:23:37.380184",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🟡 关注】Microsoft AI最新动态：RT by @MicrosoftAI: We just dropped what we believ..."
+  },
+  "2029702379034267985#m": {
+    "time": "2026-03-06T13:23:40.103199",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy最新动态：R to @karpathy: sorry just to clarify - the real b..."
+  },
+  "2029701092347630069#m": {
+    "time": "2026-03-06T13:23:40.104744",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🔴 重磅】Andrej Karpathy最新动态：nanochat now trains GPT-2 capability model in just..."
+  },
+  "2029696850366971921#m": {
+    "time": "2026-03-06T13:23:40.106477",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy最新动态：There was a nice time where researchers talked abo..."
+  },
+  "2029462368212877754#m": {
+    "time": "2026-03-06T13:23:42.654151",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun最新动态：RT by @ylecun: made you the scatter plot you shoul..."
+  },
+  "2029391572110819378#m": {
+    "time": "2026-03-06T13:23:42.654187",
+    "account": "ylecun",
+    "important": false
+  },
+  "2029247757450449052#m": {
+    "time": "2026-03-06T13:23:42.655204",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun最新动态：RT by @ylecun: Beyond Language Modeling\n\nAn Explor..."
+  },
+  "2029552284619636770#m": {
+    "time": "2026-03-06T13:23:45.151882",
+    "account": "demishassabis",
+    "important": false
+  },
+  "2029424537331482672#m": {
+    "time": "2026-03-06T13:23:45.151900",
+    "account": "demishassabis",
+    "important": false
+  },
+  "2029356560494018956#m": {
+    "time": "2026-03-06T13:23:45.152161",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟡 关注】Demis Hassabis最新动态：RT by @demishassabis: Google has shipped a CLI for..."
+  },
+  "2028970728255852964#m": {
+    "time": "2026-03-06T13:23:48.605471",
+    "account": "drfeifei",
+    "important": true,
+    "title": "【🟡 关注】李飞飞最新动态：RT by @drfeifei: We don't expect LLMs to multiply ..."
+  },
+  "2028903220723237274#m": {
+    "time": "2026-03-06T13:23:48.616310",
+    "account": "drfeifei",
+    "important": true,
+    "title": "【🟡 关注】李飞飞最新动态：RT by @drfeifei: Text became the universal interfa..."
+  },
+  "2028904057688232201#m": {
+    "time": "2026-03-06T13:23:48.616370",
+    "account": "drfeifei",
+    "important": false
+  },
+  "2029741920344306045#m": {
+    "time": "2026-03-06T15:08:39.184071",
+    "account": "ylecun",
+    "important": false
+  },
+  "2029726434928046382#m": {
+    "time": "2026-03-06T15:08:39.184429",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun最新动态：RT by @ylecun: Anthropic's Revealing Chart on AI's..."
+  },
+  "2029631253360824691#m": {
+    "time": "2026-03-06T15:08:39.185939",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun最新动态：RT by @ylecun: US productivity grew by a robust 2...."
+  },
+  "2029627696314208257": {
+    "time": "2026-03-06T15:38:48.671620",
+    "account": "sama",
+    "important": true,
+    "title": "【🔴 重磅】Sam Altman：  We will be able to fix these three things!...",
+    "source": "camoufox"
+  },
+  "2029623948980416681": {
+    "time": "2026-03-06T15:38:48.672857",
+    "account": "sama",
+    "important": true,
+    "title": "【🟠 重要】Sam Altman：  Forgot to mention /fast! I think people will like this....",
+    "source": "camoufox"
+  },
+  "2029622090152956335": {
+    "time": "2026-03-06T15:38:48.673758",
+    "account": "sama",
+    "important": true,
+    "title": "【🔴 重磅】Sam Altman：  GPT-5.4 is a big step up in computer use and economicall...",
+    "source": "camoufox"
+  },
+  "2029620619743219811": {
+    "time": "2026-03-06T15:39:02.160517",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🔴 重磅】OpenAI： Pinned Tweet   GPT-5.4 Thinking and GPT-5.4 Pro are roll...",
+    "source": "camoufox"
+  },
+  "2029620624923189283": {
+    "time": "2026-03-06T15:39:02.162168",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟠 重要】OpenAI：  GPT-5.4 Thinking and Pro are rolling out gradually start...",
+    "source": "camoufox"
+  },
+  "2028873512203489483": {
+    "time": "2026-03-06T15:39:15.570895",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI： Pinned Tweet   \"Smarter. Faster. Gemini 3.1 Flash-Lite i...",
+    "source": "camoufox"
+  },
+  "2028982662061265371": {
+    "time": "2026-03-06T15:39:15.572406",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟡 关注】Google AI：  \"Here are a couple examples of how Gemini 3.1 Flash-Lite...",
+    "source": "camoufox"
+  },
+  "2027463725498720306": {
+    "time": "2026-03-06T15:39:15.573131",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟡 关注】Google AI：  \"This week we had a BUNCH of updates 🍌🍌 Here’s what we a...",
+    "source": "camoufox"
+  },
+  "2029719864533721481": {
+    "time": "2026-03-06T15:39:28.975759",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🔴 重磅】Anthropic： Pinned Tweet   \"A statement from Anthropic CEO Dario Amo...",
+    "source": "camoufox"
+  },
+  "2027150818575528261": {
+    "time": "2026-03-06T15:39:28.977049",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🔴 重磅】Anthropic：  A statement from Anthropic CEO, Dario Amodei, on our dis...",
+    "source": "camoufox"
+  },
+  "2026765822623182987": {
+    "time": "2026-03-06T15:39:28.978011",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🔴 重磅】Anthropic：  \"Second, in retirement interviews, Opus 3 expressed a de...",
+    "source": "camoufox"
+  },
+  "2000980784425931067": {
+    "time": "2026-03-06T15:39:42.673251",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🔴 重磅】Meta AI： Pinned Tweet   \"🔉 Introducing SAM Audio, the first unifi...",
+    "source": "camoufox"
+  },
+  "2024631824304022000": {
+    "time": "2026-03-06T15:39:42.674773",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🟡 关注】Meta AI：  \"ICYMI:\" \"spoke at the India AI Impact Summit where he s...",
+    "source": "camoufox"
+  },
+  "2023425964680589381": {
+    "time": "2026-03-06T15:39:42.675882",
+    "account": "AIatMeta",
+    "important": true,
+    "title": "【🟡 关注】Meta AI：  \"Our team is heading to India this week for the AI Impac...",
+    "source": "camoufox"
+  },
+  "2027111503003107377": {
+    "time": "2026-03-06T15:39:56.248555",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🟠 重要】Microsoft AI：  \"We've been working on a whole new way to get things don...",
+    "source": "camoufox"
+  },
+  "2015817413200408959": {
+    "time": "2026-03-06T15:39:56.249537",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🔴 重磅】Microsoft AI：  Our newest AI accelerator Maia 200 is now online in Azur...",
+    "source": "camoufox"
+  },
+  "1990815500683588005": {
+    "time": "2026-03-06T15:39:56.250302",
+    "account": "MicrosoftAI",
+    "important": true,
+    "title": "【🟠 重要】Microsoft AI：  \"AI browsing that’s safe for work? Yes, please. Copilot ...",
+    "source": "camoufox"
+  },
+  "1617979122625712128": {
+    "time": "2026-03-06T15:40:10.037117",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🔴 重磅】Andrej Karpathy： Pinned Tweet   The hottest new programming language is E...",
+    "source": "camoufox"
+  },
+  "2029701092347630069": {
+    "time": "2026-03-06T15:40:10.038436",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy：  \"nanochat now trains GPT-2 capability model in just 2 ho...",
+    "source": "camoufox"
+  },
+  "2029672507448643706": {
+    "time": "2026-03-06T15:40:10.040054",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy：  \"I've been thinking a bit about continual learning recen...",
+    "source": "camoufox"
+  },
+  "1862598063275061484": {
+    "time": "2026-03-06T15:40:23.609256",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun： Pinned Tweet   I do not write posts on X. I tweet links ...",
+    "source": "camoufox"
+  },
+  "2029726434928046382": {
+    "time": "2026-03-06T15:40:23.610450",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  \"Anthropic's Revealing Chart on AI's Impact on Jobs Anth...",
+    "source": "camoufox"
+  },
+  "2029550710606512254": {
+    "time": "2026-03-06T15:40:23.611682",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  Productivity increases 2.8% in Q4 2025; unit labor costs...",
+    "source": "camoufox"
+  },
+  "2029047252275060895": {
+    "time": "2026-03-06T15:40:37.238908",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟠 重要】Demis Hassabis： Pinned Tweet   small but mighty 💪 - our new Gemini 3.1 F...",
+    "source": "camoufox"
+  },
+  "2029552284619636770": {
+    "time": "2026-03-06T15:40:37.240782",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟡 关注】Demis Hassabis：  This is one banger of an explanation of the time-slit ex...",
+    "source": "camoufox"
+  },
+  "2029356560494018956": {
+    "time": "2026-03-06T15:40:37.242014",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🔴 重磅】Demis Hassabis：  Google has shipped a CLI for Google Workspace (Drive, Gm...",
+    "source": "camoufox"
+  },
+  "2029620619743219811#m": {
+    "time": "2026-03-06T16:30:05.289110",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟢 参考】OpenAI：GPT-5.4 Thinking and GPT-5.4 Pro are rolling out now in Chat...",
+    "source": "nitter"
+  },
+  "2029272574426026083": {
+    "time": "2026-03-06T19:00:27.522646",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟠 重要】OpenAI：🧵1/ We've brought the most advanced AI to Prism by introduci...",
+    "source": "camoufox"
+  },
+  "2028982664389116051": {
+    "time": "2026-03-06T19:00:41.447832",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟡 关注】Google AI：  Second, using 3.1 Flash-Lite in \", we built a retail bus...",
+    "source": "camoufox"
+  },
+  "2028873514237726945": {
+    "time": "2026-03-06T19:00:41.451004",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟡 关注】Google AI：  \"Learn more about Gemini 3.1 Flash Lite in our blog:\" bl...",
+    "source": "camoufox"
+  },
+  "2029377041653694821": {
+    "time": "2026-03-06T20:01:51.729563",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  Yann LeCun ( \") explains why LLMs are so limited in term...",
+    "source": "camoufox"
+  },
+  "1987891210699379091": {
+    "time": "2026-03-06T20:02:19.974343",
+    "account": "drfeifei",
+    "important": true,
+    "title": "【🔴 重磅】李飞飞： Pinned Tweet   AI’s next frontier is Spatial Intelligenc...",
+    "source": "camoufox"
+  },
+  "2028903220723237274": {
+    "time": "2026-03-06T20:02:19.975300",
+    "account": "drfeifei",
+    "important": true,
+    "title": "【🟡 关注】李飞飞：  Text became the universal interface for software. 3D is ...",
+    "source": "camoufox"
+  },
+  "2025014927849931087": {
+    "time": "2026-03-06T20:02:19.975334",
+    "account": "drfeifei",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2028970728255852964": {
+    "time": "2026-03-06T23:02:27.752972",
+    "account": "drfeifei",
+    "important": true,
+    "title": "【🟡 关注】李飞飞：  We don't expect LLMs to multiply numbers or sort lists d...",
+    "source": "camoufox"
+  },
+  "2028904057688232201": {
+    "time": "2026-03-06T23:02:27.753011",
+    "account": "drfeifei",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2029533545161740321": {
+    "time": "2026-03-07T00:01:54.098170",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun：  Yann LeCun's ( ) new paper along with other top research...",
+    "source": "camoufox"
+  },
+  "2029741920344306045": {
+    "time": "2026-03-07T00:01:54.098195",
+    "account": "ylecun",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2029650046002811280": {
+    "time": "2026-03-07T01:00:29.020931",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟠 重要】OpenAI：  We're publishing a new evaluation suite and research pap...",
+    "source": "camoufox"
+  },
+  "2029620623199326334": {
+    "time": "2026-03-07T01:00:29.022341",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟠 重要】OpenAI：  \"GPT-5.4 is our most factual and efficient model: fewer ...",
+    "source": "camoufox"
+  },
+  "2029702379034267985": {
+    "time": "2026-03-07T01:01:39.056536",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟡 关注】Andrej Karpathy：  \"sorry just to clarify - the real benchmark of interest ...",
+    "source": "camoufox"
+  },
+  "2029696850366971921": {
+    "time": "2026-03-07T01:01:39.057529",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy：  There was a nice time where researchers talked about var...",
+    "source": "camoufox"
+  },
+  "2029911649298362524#m": {
+    "time": "2026-03-07T02:00:25.610054",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟢 参考】OpenAI：RT by @OpenAI: Construction is underway at our site in Port ...",
+    "source": "nitter"
+  },
+  "2029978909207617634": {
+    "time": "2026-03-07T02:00:53.539383",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟡 关注】Anthropic：  We partnered with Mozilla to test Claude's ability to fi...",
+    "source": "camoufox"
+  },
+  "2029911649298362524": {
+    "time": "2026-03-07T03:00:27.925329",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟡 关注】OpenAI：  Construction is underway at our site in Port Washington,...",
+    "source": "camoufox"
+  },
+  "2029978911099244944": {
+    "time": "2026-03-07T03:00:55.278375",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟡 关注】Anthropic：  \"Frontier models are now world-class vulnerability resea...",
+    "source": "camoufox"
+  },
+  "2029929849897234785": {
+    "time": "2026-03-07T03:01:50.904115",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  \"Jobs report uniformly weak: 92K jobs lost (with job los...",
+    "source": "camoufox"
+  },
+  "2029574369291215029": {
+    "time": "2026-03-07T03:01:50.905515",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  \"We asked people around the world to rate the morality a...",
+    "source": "camoufox"
+  },
+  "2030003319100325981": {
+    "time": "2026-03-07T04:00:41.813260",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟢 参考】Google AI：  Start creating with Nano Banana 2 today — available via ...",
+    "source": "camoufox"
+  },
+  "2027555481699446918": {
+    "time": "2026-03-07T04:00:55.425509",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🔴 重磅】Anthropic：  A statement on the comments from Secretary of War Pete H...",
+    "source": "camoufox"
+  },
+  "2029950967031247231#m": {
+    "time": "2026-03-07T06:01:33.465088",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟢 参考】Andrej Karpathy：R to @karpathy: ah yes, this is what post-agi feels like :) ...",
+    "source": "nitter"
+  },
+  "2029950967031247231": {
+    "time": "2026-03-07T07:01:36.883753",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟡 关注】Andrej Karpathy：  ah yes, this is what post-agi feels like :) i didn't tou...",
+    "source": "camoufox"
+  },
+  "2030003316520861835": {
+    "time": "2026-03-07T09:00:41.771651",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟡 关注】Google AI：  \"With Nano Banana 2, the potential for creativity extend...",
+    "source": "camoufox"
+  },
+  "2029619309753029098": {
+    "time": "2026-03-07T09:02:03.872737",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🔴 重磅】Demis Hassabis：  McDonald’s CEO is playing 10D chess. Sets the bar low wi...",
+    "source": "camoufox"
+  },
+  "2029424537331482672": {
+    "time": "2026-03-07T09:02:03.873764",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟠 重要】Demis Hassabis：  Just got this amazing cinematic video on the history of ...",
+    "source": "camoufox"
+  },
+  "2029985250512920743#m": {
+    "time": "2026-03-07T10:00:25.702028",
+    "account": "OpenAI",
+    "important": true,
+    "title": "【🟢 参考】OpenAI：Codex Security—our application security agent—is now in rese...",
+    "source": "nitter"
+  },
+  "2029633868916216287#m": {
+    "time": "2026-03-07T17:02:12.621626",
+    "account": "drfeifei",
+    "important": false,
+    "source": "nitter"
+  },
+  "2029823675952742514": {
+    "time": "2026-03-07T21:01:50.891088",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  The Trump-Netanyahu bombing of Iran is providing a finan...",
+    "source": "camoufox"
+  },
+  "2029593915674771457": {
+    "time": "2026-03-07T21:01:50.891903",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  \"One of the clearest proofs that LLMs don’t really under...",
+    "source": "camoufox"
+  },
+  "2030002820515291215": {
+    "time": "2026-03-08T01:00:15.761422",
+    "account": "sama",
+    "important": true,
+    "title": "【🟡 关注】Sam Altman：  \"We just launched Codex Security! Probably a no-brainer ...",
+    "source": "camoufox"
+  },
+  "2030318958512164966": {
+    "time": "2026-03-08T01:00:15.761454",
+    "account": "sama",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2030318632899953108": {
+    "time": "2026-03-08T01:00:15.761467",
+    "account": "sama",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2029955683261579309": {
+    "time": "2026-03-08T02:02:04.338380",
+    "account": "demishassabis",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2030002820515291215#m": {
+    "time": "2026-03-08T03:00:12.265206",
+    "account": "sama",
+    "important": true,
+    "title": "【🟢 参考】Sam Altman：RT by @sama: We just launched Codex Security! \n\nProbably a n...",
+    "source": "nitter"
+  },
+  "2030319489993298349#m": {
+    "time": "2026-03-08T03:00:12.266199",
+    "account": "sama",
+    "important": true,
+    "title": "【🟢 参考】Sam Altman：GPT-5.4 is great at coding, knowledge work, computer use, et...",
+    "source": "nitter"
+  },
+  "2030318958512164966#m": {
+    "time": "2026-03-08T03:00:12.266233",
+    "account": "sama",
+    "important": false,
+    "source": "nitter"
+  },
+  "2030355283843706981": {
+    "time": "2026-03-08T03:01:48.722705",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟢 参考】Yann LeCun：  RT \": Why must LLMs hallucinate? The answer in this pape...",
+    "source": "camoufox"
+  },
+  "2030328024919396500": {
+    "time": "2026-03-08T04:01:49.892879",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun：  Why must LLMs hallucinate? The answer in this paper - a ...",
+    "source": "camoufox"
+  },
+  "2029965619970322807": {
+    "time": "2026-03-08T04:01:49.896685",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  Trump’s second-term pardons are historic in their enormi...",
+    "source": "camoufox"
+  },
+  "2030371219518931079": {
+    "time": "2026-03-08T05:01:33.802017",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟠 重要】Andrej Karpathy：  \"I packaged up the \\\"autoresearch\\\" project into a new s...",
+    "source": "camoufox"
+  },
+  "2030010676157239600": {
+    "time": "2026-03-08T05:01:47.536135",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  \"🚨BREAKING: OpenAI published a paper proving that ChatGP...",
+    "source": "camoufox"
+  },
+  "2029935653065019763": {
+    "time": "2026-03-08T06:01:49.826126",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  We live in a country where an alcoholic from Fox News ru...",
+    "source": "camoufox"
+  },
+  "2029970167573401819": {
+    "time": "2026-03-08T06:01:49.827258",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  \"New paper out: AI Must Embrace Specialization via Super...",
+    "source": "camoufox"
+  },
+  "2029999833717838016#m": {
+    "time": "2026-03-08T07:00:53.718464",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟢 参考】Anthropic：New on the Anthropic Engineering Blog: In evaluating Claude ...",
+    "source": "nitter"
+  },
+  "2029978911099244944#m": {
+    "time": "2026-03-08T07:00:53.719708",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟢 参考】Anthropic：R to @AnthropicAI: Frontier models are now world-class vulne...",
+    "source": "nitter"
+  },
+  "2029978909207617634#m": {
+    "time": "2026-03-08T07:00:53.720451",
+    "account": "AnthropicAI",
+    "important": true,
+    "title": "【🟢 参考】Anthropic：We partnered with Mozilla to test Claude's ability to find s...",
+    "source": "nitter"
+  },
+  "2030373745991536982#m": {
+    "time": "2026-03-08T08:01:35.927618",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟢 参考】Andrej Karpathy：R to @karpathy: (I still have the bigger cousin running on p...",
+    "source": "nitter"
+  },
+  "2030371219518931079#m": {
+    "time": "2026-03-08T08:01:35.928704",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟢 参考】Andrej Karpathy：I packaged up the \"autoresearch\" project into a new self-con...",
+    "source": "nitter"
+  },
+  "2030037949287391724#m": {
+    "time": "2026-03-08T08:25:59.239266",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：ICYMI, here’s a recap of this week’s launches:\n\n— ..."
+  },
+  "2030003316520861835#m": {
+    "time": "2026-03-08T08:25:59.241448",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：With Nano Banana 2, the potential for creativity e..."
+  },
+  "2030003319100325981#m": {
+    "time": "2026-03-08T08:25:59.242086",
+    "account": "GoogleAI",
+    "important": true,
+    "title": "【🟠 重要】Google AI最新动态：R to @GoogleAI: Start creating with Nano Banana 2 ..."
+  },
+  "2030373745991536982": {
+    "time": "2026-03-08T10:01:33.259940",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟡 关注】Andrej Karpathy：  (I still have the bigger cousin running on prod nanochat...",
+    "source": "camoufox"
+  },
+  "2030312717299396618": {
+    "time": "2026-03-08T17:01:46.031265",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun：  Had to doublecheck the date on this...",
+    "source": "camoufox"
+  },
+  "2029955683261579309#m": {
+    "time": "2026-03-08T17:01:57.907654",
+    "account": "demishassabis",
+    "important": false,
+    "source": "nitter"
+  },
+  "2029619309753029098#m": {
+    "time": "2026-03-08T17:01:57.907936",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟢 参考】Demis Hassabis：RT by @demishassabis: McDonald’s CEO is playing 10D chess.\n\n...",
+    "source": "nitter"
+  },
+  "2030411584619925605": {
+    "time": "2026-03-08T18:01:49.410304",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  \"The obvious reasons intelligence-per-watt is going up s...",
+    "source": "camoufox"
+  },
+  "2030284929804677342": {
+    "time": "2026-03-08T18:01:49.412185",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  \"Just so we’re quite clear, the President is insane:\"...",
+    "source": "camoufox"
+  },
+  "2030403926755811621": {
+    "time": "2026-03-08T19:01:47.759497",
+    "account": "ylecun",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2030348225907941384#m": {
+    "time": "2026-03-08T20:01:48.409046",
+    "account": "ylecun",
+    "important": false,
+    "source": "nitter"
+  },
+  "2030552312087740845#m": {
+    "time": "2026-03-08T20:01:48.409069",
+    "account": "ylecun",
+    "important": false,
+    "source": "nitter"
+  },
+  "2030403926755811621#m": {
+    "time": "2026-03-08T20:01:48.409081",
+    "account": "ylecun",
+    "important": false,
+    "source": "nitter"
+  },
+  "2030552312087740845": {
+    "time": "2026-03-08T21:01:48.893778",
+    "account": "ylecun",
+    "important": false,
+    "source": "camoufox"
+  },
+  "2029973065954668969": {
+    "time": "2026-03-08T21:01:48.894049",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  Tweet of the year?...",
+    "source": "camoufox"
+  },
+  "2030357438113698165": {
+    "time": "2026-03-08T22:01:48.459050",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  Unreal numbers 👀⚡️ \"JPMorgan estimates that, had Germany...",
+    "source": "camoufox"
+  },
+  "2030645713500287441": {
+    "time": "2026-03-09T02:02:03.810346",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟡 关注】Demis Hassabis：  Gemini was the fastest-growing Gen AI tool in year-over-...",
+    "source": "camoufox"
+  },
+  "2030645713500287441#m": {
+    "time": "2026-03-09T03:02:03.432333",
+    "account": "demishassabis",
+    "important": true,
+    "title": "【🟢 参考】Demis Hassabis：RT by @demishassabis: Gemini was the fastest-growing Gen AI ...",
+    "source": "nitter"
+  },
+  "2030326506950386006": {
+    "time": "2026-03-09T08:01:49.377888",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟠 重要】Yann LeCun：  \"🚨 46 MILLION PEOPLE STUDIED… AND THE RESULTS SHOCKED EV...",
+    "source": "camoufox"
+  },
+  "2030348225907941384": {
+    "time": "2026-03-09T08:01:49.379099",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟡 关注】Yann LeCun：  In a dangerous development for the rule of law, Trump’s ...",
+    "source": "camoufox"
+  },
+  "2030478975525605660": {
+    "time": "2026-03-09T09:01:47.668356",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  \"🔺 Trump’s son buys $50 million worth of oil sector stoc...",
+    "source": "camoufox"
+  },
+  "2030763031467086317": {
+    "time": "2026-03-09T09:01:47.669425",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🔴 重磅】Yann LeCun：  As US troops deploy to the Middle East. As gas prices sp...",
+    "source": "camoufox"
+  },
+  "2030705271627284816#m": {
+    "time": "2026-03-09T12:01:40.068667",
+    "account": "karpathy",
+    "important": true,
+    "title": "【🟢 参考】Andrej Karpathy：The next step for autoresearch is that it has to be asynchro...",
+    "source": "nitter"
+  },
+  "2030673979183124832#m": {
+    "time": "2026-03-09T14:01:45.547293",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟢 参考】Yann LeCun：RT by @ylecun: Le flux migratoire des experts dans les techn...",
+    "source": "nitter"
+  },
+  "2030478975525605660#m": {
+    "time": "2026-03-09T14:01:45.548328",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟢 参考】Yann LeCun：RT by @ylecun: 🔺 Trump’s son buys $50 million worth of oil s...",
+    "source": "nitter"
+  },
+  "2030665868481323499#m": {
+    "time": "2026-03-09T14:01:45.549072",
+    "account": "ylecun",
+    "important": true,
+    "title": "【🟢 参考】Yann LeCun：RT by @ylecun: \"I have no evidence that Trump started this w...",
+    "source": "nitter"
+  }
+}
