@@ -37,3 +37,22 @@
 
 ## 日报存档
 - knowledge/daily-reports/YYYY-MM-DD/report.md
+
+## 活跃项目
+
+### FilmStudio - AI影视制作平台
+- **启动时间**: 2026-03-13
+- **GitHub**: https://github.com/peggypan/filmstudio
+- **技术栈**: React 18 + TypeScript + Vite + NestJS + Prisma + PostgreSQL
+- **核心功能**: 剧本管理、分镜设计、配乐管理、配音合成、演员管理、项目管理
+- **状态**: 框架搭建完成，待功能开发
+- **差异化**: AI-Native (GPT-4剧本生成、Midjourney分镜图、ElevenLabs配音)
+
+### 公众号-想象X
+- **Happy老师**: 家庭教育指导师，活跃于群聊
+- **公众号管家**: AI动态监控系统 v4.1，监控13个Twitter账号
+- **健康管家**: 待激活
+
+---
+
+*最后更新: 2026-03-13*

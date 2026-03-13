@@ -1,4 +1,100 @@
-# HEARTBEAT.md
+# 💓 HEARTBEAT.md - Mission Control 自动化
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-# Add tasks below when you want the agent to check something periodically.
+> 全局定时任务配置，协调所有项目
+
+---
+
+## Morning Routine (每日 09:00)
+
+```markdown
+1. 读取 TASKS.md 检查本周重点
+2. 读取 CALENDAR.md 检查今日日程
+3. 检查各项目截止日期 (< 24小时)
+4. 如有紧急事项，主动提醒用户
+5. 生成每日简报
+```
+
+### 每日简报模板
+```
+📅 今日日程: X项
+🎯 本周重点: X项
+⚠️ 紧急事项: X项 (截止日期 < 24h)
+📊 项目状态: FilmStudio(15%), 公众号(运行中)
+```
+
+---
+
+## Evening Routine (每日 18:00)
+
+```markdown
+1. 扫描所有项目 TASKS.md 完成情况
+2. 更新 PROJECTS.md 进度百分比
+3. 将已完成任务归档到 Completed
+4. 生成明日待办预览
+5. 记录到 memory/daily/YYYY-MM-DD.md
+```
+
+---
+
+## Weekly Routine (每周日 20:00)
+
+```markdown
+1. 生成本周生产力报告
+2. 更新所有项目进度
+3. 检查下周里程碑
+4. 规划下周重点
+5. 推送周报到用户
+```
+
+### 周报模板
+```
+📊 本周完成: X项任务
+🎯 项目进度:
+  - FilmStudio: X%
+  - 公众号: 运行正常
+📅 下周计划: X项重点
+⚠️ 风险提示: XXX
+```
+
+---
+
+## Project Check Routine (每小时)
+
+```markdown
+1. 检查 FilmStudio GitHub 提交
+2. 检查公众号管家运行状态
+3. 如有异常，立即通知
+```
+
+---
+
+## 自动化规则
+
+### 任务自动化
+- 任务截止前24小时 → 自动提醒
+- 任务逾期 → 标红提醒 + 询问是否需要调整
+- 连续3天无进展 → 询问是否遇到困难
+
+### 项目自动化
+- 项目进度 > 80% → 提醒准备收尾
+- 项目逾期 → 重新评估时间表
+- 新项目创建 → 自动创建项目级 Mission Control 文件
+
+### 记忆自动化
+- 重要决策 → 自动记录到 MEMORY.md
+- 技术选型 → 记录到项目 memory/decisions.md
+- 问题解决方案 → 记录到项目 memory/learnings.md
+
+---
+
+## 手动触发命令
+
+用户可以说：
+- "执行 Morning Routine" - 立即执行晨间检查
+- "生成周报" - 立即生成本周报告
+- "更新项目进度" - 扫描并更新所有项目状态
+- "检查紧急事项" - 立即检查截止日期
+
+---
+
+*上次更新: 2026-03-13*
