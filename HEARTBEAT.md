@@ -4,7 +4,7 @@
 
 ---
 
-## Morning Routine (每日 09:00)
+## Morning Routine (每日 07:30)
 
 ```markdown
 1. 读取 TASKS.md 检查本周重点
@@ -24,7 +24,7 @@
 
 ---
 
-## Evening Routine (每日 18:00)
+## Evening Routine (每日 19:30)
 
 ```markdown
 1. 扫描所有项目 TASKS.md 完成情况
