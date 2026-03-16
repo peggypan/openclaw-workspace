@@ -45,8 +45,20 @@
 - **GitHub**: https://github.com/peggypan/filmstudio
 - **技术栈**: React 18 + TypeScript + Vite + NestJS + Prisma + PostgreSQL
 - **核心功能**: 剧本管理、分镜设计、配乐管理、配音合成、演员管理、项目管理
-- **状态**: 框架搭建完成，待功能开发
+- **状态**: 分镜编辑器V2 UI优化完成，待功能开发
 - **差异化**: AI-Native (GPT-4剧本生成、Midjourney分镜图、ElevenLabs配音)
+
+### AI Stars - AI明星库
+- **启动时间**: 2026-03-16
+- **GitHub**: https://github.com/peggypan/aistars
+- **技术栈**: NestJS + Prisma + PostgreSQL + React
+- **核心功能**: AI生成虚拟明星、分类管理、作品库、榜单系统
+- **状态**: 项目初始化完成，数据库模型设计完成
+- **差异化**: 
+  - AI-Native设计，从底层为虚拟明星而生
+  - 完整人设体系（性格、背景、外貌、技能）
+  - 与FilmStudio无缝对接
+- **定位**: 可独立上线，也可作为FilmStudio的演员库
 
 ### 公众号-想象X
 - **Happy老师**: 家庭教育指导师，活跃于群聊
@@ -55,4 +67,4 @@
 
 ---
 
-*最后更新: 2026-03-13*
+*最后更新: 2026-03-16*
