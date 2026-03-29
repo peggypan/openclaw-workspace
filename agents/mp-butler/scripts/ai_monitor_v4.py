@@ -495,11 +495,18 @@ def send_feishu_notification(articles, chat_id="oc_f815b8902d22c11ba7f692193bfab
         
         # 尝试使用 openclaw 命令发送 (如果可用)
         try:
+            import os
+            # 设置完整的环境变量（cron 环境 PATH 不完整）
+            env = os.environ.copy()
+            env['PATH'] = '/root/.nvm/versions/node/v22.22.0/bin:' + env.get('PATH', '')
+            OPENCLAW_BIN = "/root/.nvm/versions/node/v22.22.0/bin/openclaw"
+            
             result = subprocess.run(
-                ['openclaw', 'message', 'send', '--channel', 'feishu', 
+                [OPENCLAW_BIN, 'message', 'send', '--channel', 'feishu', 
                  '--target', chat_id, '--message', message_content],
                 capture_output=True,
-                timeout=10
+                timeout=10,
+                env=env
             )
             if result.returncode == 0:
                 print("  ✅ 飞书消息已通过 openclaw 发送")

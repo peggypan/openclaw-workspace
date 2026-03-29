@@ -18,19 +18,26 @@ SENT_MARKER = DATA_DIR / "feishu_notification.sent"
 def send_via_openclaw(message):
     """使用 openclaw 命令发送飞书消息"""
     import subprocess
+    import os
     try:
         # 将消息写入临时文件避免命令行长度问题
         temp_msg = DATA_DIR / ".feishu_msg_temp.txt"
         with open(temp_msg, 'w', encoding='utf-8') as f:
             f.write(message)
         
-        # 使用 shell 命令发送
-        cmd = f'cat {temp_msg} | openclaw message send --channel feishu --target {FEISHU_CHAT_ID}'
+        # 设置完整的环境变量（cron 环境 PATH 不完整）
+        env = os.environ.copy()
+        env['PATH'] = '/root/.nvm/versions/node/v22.22.0/bin:' + env.get('PATH', '')
+        
+        # 使用 openclaw 完整路径
+        OPENCLAW_BIN = "/root/.nvm/versions/node/v22.22.0/bin/openclaw"
+        cmd = f'cat {temp_msg} | {OPENCLAW_BIN} message send --channel feishu --target {FEISHU_CHAT_ID}'
         result = subprocess.run(
             cmd,
             shell=True,
             capture_output=True,
-            timeout=15
+            timeout=15,
+            env=env
         )
         
         temp_msg.unlink(missing_ok=True)

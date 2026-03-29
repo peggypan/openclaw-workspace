@@ -30,14 +30,14 @@ case $TASK_TYPE in
     ;;
     
   # ============================================
-  # AI动态监控系统 (公众号管家)
+  # AI动态监控系统 (公众号管家) v4.2
   # ============================================
   ai-monitor)
-    echo "[$DATE] AI Monitor - 公众号管家" >> $LOG_FILE
+    echo "[$DATE] AI Monitor - 公众号管家 v4.2" >> $LOG_FILE
     cd /root/.openclaw/workspace/knowledge/公众号-想象X/agents/公众号管家 && \
       /usr/bin/python3 scripts/ai_monitor_v4.py >> /tmp/ai_monitor.log 2>&1 && \
-      /usr/bin/python3 scripts/send_feishu_notify.py >> /tmp/ai_monitor.log 2>&1
-    echo "[$DATE] AI Monitor 完成" >> $LOG_FILE
+      /usr/bin/python3 scripts/push_notification.py >> /tmp/ai_monitor.log 2>&1
+    echo "[$DATE] AI Monitor 完成 (含推送)" >> $LOG_FILE
     ;;
     
   # ============================================
@@ -54,6 +54,16 @@ case $TASK_TYPE in
   stargate)
     # 系统自带，不记录日志
     flock -xn /tmp/stargate.lock -c '/usr/local/qcloud/stargate/admin/start.sh > /dev/null 2>&1 &'
+    ;;
+    
+  # ============================================
+  # 今日综合早报 - 产品经理Agent (使用 news-aggregator-skill)
+  # ============================================
+  morning-report)
+    echo "[$DATE] Morning Report - 今日综合早报" >> $LOG_FILE
+    cd /root/.openclaw/workspace/agents/product-manager && \
+      /usr/bin/python3 scripts/send_morning_report_v2.py >> /tmp/morning_report.log 2>&1
+    echo "[$DATE] 早报发送完成 (使用 news-aggregator-skill)" >> $LOG_FILE
     ;;
     
   *)

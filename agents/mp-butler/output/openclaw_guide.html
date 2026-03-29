@@ -1,0 +1,368 @@
+<section style="font-size:16px;line-height:1.9;color:#333333;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;padding:0 8px;">
+<p style="text-align:center;font-size:24px;font-weight:bold;margin-bottom:30px;">OpenClaw 完全安装指南：从零开始搭建你的 AI 自动化中枢</p>
+<blockquote style="border-left:3px solid #1e6fff;background:#f7f8fa;padding:15px 20px;border-radius:4px;margin-bottom:20px;">一份写给技术爱好者和效率追求者的一站式建筑手册</blockquote>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">01</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">一、OpenClaw 是什么</p>
+<p style="margin-bottom:25px;text-indent:0;">OpenClaw 是一个开源的 AI 自动化执行平台。</p>
+<p style="margin-bottom:25px;text-indent:0;">简单来说，它像是一个<span style="color:#1e6fff;font-weight:bold;">智能遥控器</span>——你可以通过自然语言指令，让 AI 帮你执行各种任务：查天气、发消息、操作浏览器、读写文件、甚至管理你的代码仓库。</p>
+<p style="margin-bottom:25px;text-indent:0;">不同于单一的 AI 聊天工具，OpenClaw 的核心价值在于<span style="color:#1e6fff;font-weight:bold;">执行</span>。</p>
+<p style="margin-bottom:25px;text-indent:0;">它把 AI 的"理解能力"与系统的"操作能力"连接起来，让 AI 从"只能说话"进化到"能做事"。</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">02</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">二、安装前的准备</p>
+<p style="margin-bottom:25px;text-indent:0;">在动手安装之前，先问自己三个问题：</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">🤔 问题1：你要用 OpenClaw 做什么？</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">如果只是</span>想聊天、生成图片——<span style="color:#1e6fff;font-weight:bold;">没必要安装</span>。用 ChatGPT、Claude、Kimi 这些现成的工具就够了。</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">如果是</span>想打造自动化工作流、系统性地构建自己的 AI 助手，或者单纯想动手体验——<span style="color:#1e6fff;font-weight:bold;">可以安装</span>。</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">💰 问题2：你每月打算花多少钱？</p>
+<p style="margin-bottom:25px;text-indent:0;">不同需求有不同的成本底线：</p>
+<p style="margin-bottom:25px;text-indent:0;">| 方案 | 月成本 | 说明 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|------|--------|------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">最低体验版</span> | ~40元 | 字节 Coze Coding Plan Lite，适合入门体验 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">自运维版</span> | 100-300元+ | 云服务器费用 + 模型订阅（Kimi/Minimax 等） |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">本地部署版</span> | 模型费用 | 无服务器成本，但需要硬件支持 |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">建议</span>：先试试 40 元的 Coze Lite 方案，确认真的有需求再升级。</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">🔧 问题3：你是技术人员还是非技术人员？</p>
+<p style="margin-bottom:25px;text-indent:0;">| 你的情况 | 推荐方案 | 原因 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|----------|----------|------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">完全无技术背景</span> | 用封装好的平台（国内推荐字节 Coze） | 开箱即用，省心省力 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">有一定技术能力</span> | 建议自部署 OpenClaw | 灵活可控，数据自主 |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">技术人员特别提醒</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- 建议选择<span style="color:#1e6fff;font-weight:bold;">国区之外的云服务器</span>部署，可获取的信息资源更丰富</p>
+<p style="margin-bottom:25px;text-indent:0;">- 如果你的需求都在国区内，用封装平台反而更简单</p>
+<p style="margin-bottom:25px;text-indent:0;">- 国外用户推荐 Google 生态，整体工具链成熟</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="margin-bottom:25px;text-indent:0;">想清楚了以上三个问题，确认 OpenClaw 适合你，再继续看下面的环境要求：</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">2.1 系统要求</p>
+<p style="margin-bottom:25px;text-indent:0;">| 平台 | 支持情况 | 备注 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|------|----------|------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| Linux | ✅ 完全支持 | 推荐 Ubuntu 20.04+ / Debian 11+ |</p>
+<p style="margin-bottom:25px;text-indent:0;">| macOS | ✅ 支持 | 推荐 macOS 13+ |</p>
+<p style="margin-bottom:25px;text-indent:0;">| Windows | ⚠️ 需 WSL2 | 通过 Windows Subsystem for Linux |</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">2.2 依赖环境</p>
+<p style="margin-bottom:25px;text-indent:0;">OpenClaw 基于 Node.js 构建，需要：</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">Node.js</span>: 22.x 或更高版本</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">npm</span>: 10.x 或更高版本</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">Git</span>: 用于克隆仓库和更新</p>
+<p style="margin-bottom:25px;text-indent:0;">检查你的 Node.js 版本：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">node --version  # 应显示 v22.x.x 或更高
+npm --version   # 应显示 10.x.x 或更高</pre>
+<p style="margin-bottom:25px;text-indent:0;">如果版本过低，建议先升级 Node.js（可以使用 nvm）：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+source ~/.bashrc
+nvm install 22
+nvm use 22</pre>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">03</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">三、三种部署方案详解</p>
+<p style="margin-bottom:25px;text-indent:0;">在正式安装之前，你需要选择一种部署方式。OpenClaw 有三种主流部署方案，各有优劣：</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">3.1 云端自部署（云养虾） ☁️</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">定义</span>：在租用的云服务器上自行部署 OpenClaw。</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">适合人群</span>：有一定技术基础，希望灵活可控的用户</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">数据自主</span>：数据存储在自己的服务器上</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">灵活可控</span>：可以自由选择服务器位置（国区/海外）</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">访问稳定</span>：24小时在线，不依赖本地网络</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">可扩展</span>：可根据需求随时升级配置</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">需要运维能力</span>：需要自己维护服务器</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">有服务器成本</span>：月费约 50-200 元（取决于配置和位置）</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">需要域名/备案</span>（国区服务器）：如果选国区，需要备案</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">推荐服务商</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">| 服务商 | 价格区间 | 特点 | 推荐场景 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|--------|----------|------|----------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">阿里云 ECS</span> | ￥60-200/月 | 国内访问快，需备案 | 国内用户，访问国内资源 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">腾讯云 CVM</span> | ￥60-200/月 | 国内访问快，需备案 | 国内用户，访问国内资源 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">Vultr</span> | $5-20/月 | 海外节点多，免备案 | 需要访问海外资源 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">DigitalOcean</span> | $6-24/月 | 简单易用，文档丰富 | 新手海外部署 |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">部署建议</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- 最低配置：1核 2GB 内存（可运行基础功能）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 推荐配置：2核 4GB 内存（流畅运行 + 多 Agent）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 系统：Ubuntu 22.04 LTS</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">3.2 托管服务（托管虾） 🏨</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">定义</span>：使用第三方托管平台，无需自己维护服务器。</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">适合人群</span>：无技术背景，或不想折腾服务器的用户</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">开箱即用</span>：注册即用，无需配置环境</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">零运维</span>：平台负责维护和更新</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">成本可控</span>：按需付费，起步成本低</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">自带生态</span>：通常集成了模型、插件等</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">数据在第三方</span>：隐私性相对较弱</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">功能受限</span>：只能用平台提供的功能，难以深度定制</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">服务器位置固定</span>：无法自由选择部署位置</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">长期成本可能更高</span>：使用量大时费用会累积</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">推荐平台</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">| 平台 | 月成本 | 特点 | 适合人群 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|------|--------|------|----------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">字节 Coze</span> | ￥40+/月 | 国内生态完善，插件丰富 | 国内用户，快速上手 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">Dify</span> | 免费/付费 | 开源可自托管，可视化工作流 | 需要工作流编排 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">n8n Cloud</span> | $20+/月 | 国外老牌自动化平台 | 海外用户，英文友好 |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">重要提醒</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">托管平台本质上是用<span style="color:#1e6fff;font-weight:bold;">易用性</span>换<span style="color:#1e6fff;font-weight:bold;">自由度</span>。如果你只是想快速体验 AI 自动化，托管平台是好选择；但如果你希望深度定制、数据自主，建议考虑自部署。</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">3.3 本地部署（本地养虾） 🏠</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">定义</span>：在自己的电脑或 NAS 上部署 OpenClaw。</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">适合人群</span>：注重隐私、有闲置设备的技术爱好者</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">完全隐私</span>：数据不出本机，最安全</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">零服务器成本</span>：利用现有设备</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">局域网高速</span>：本地访问速度极快</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ <span style="color:#1e6fff;font-weight:bold;">完全控制</span>：想怎么改就怎么改</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">设备必须开机</span>：电脑/NAS 关机就无法访问</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">外网访问麻烦</span>：需要内网穿透或公网 IP</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">性能受限</span>：取决于你的设备配置</p>
+<p style="margin-bottom:25px;text-indent:0;">- ❌ <span style="color:#1e6fff;font-weight:bold;">需要一定技术</span>：环境配置、网络配置等</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">推荐场景</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- 有一台 24 小时开机的 NAS（群晖、威联通等）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 有一台闲置的笔记本/树莓派</p>
+<p style="margin-bottom:25px;text-indent:0;">- 主要在局域网内使用（家庭/办公室自动化）</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">硬件建议</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">| 设备类型 | 最低配置 | 推荐配置 | 备注 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|----------|----------|----------|------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">旧电脑</span> | 4核 4GB | 4核 8GB | Windows/Mac/Linux 均可 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">树莓派 4B</span> | 4GB 版本 | 8GB 版本 | 需要散热，性能一般 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">NAS</span> | 4核 4GB | 4核 8GB+ | 群晖/威联通需开启 SSH |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">外网访问方案</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">1. <span style="color:#1e6fff;font-weight:bold;">Tailscale</span>（推荐）：免费，简单，无需公网 IP</p>
+<p style="margin-bottom:25px;text-indent:0;">2. <span style="color:#1e6fff;font-weight:bold;">Cloudflare Tunnel</span>：免费，需配置</p>
+<p style="margin-bottom:25px;text-indent:0;">3. <span style="color:#1e6fff;font-weight:bold;">frp 内网穿透</span>：需一台云服务器做中转</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">三种方案对比总结</p>
+<p style="margin-bottom:25px;text-indent:0;">| 维度 | 云端自部署 ☁️ | 托管服务 🏨 | 本地部署 🏠 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|------|----------------|--------------|--------------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">技术门槛</span> | 中等 | 低 | 中高 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">月成本</span> | ￥50-200 | ￥40-200+ | ￥0（电费和设备除外） |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">数据隐私</span> | 高 | 中 | 最高 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">可定制性</span> | 高 | 低 | 最高 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">24小时在线</span> | ✅ | ✅ | 需设备开机 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">外网访问</span> | 直接访问 | 直接访问 | 需额外配置 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">推荐人群</span> | 技术人员 | 非技术/快速体验 | 隐私敏感/有闲置设备 |</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">选择建议</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">新手想快速体验</span> → 选<span style="color:#1e6fff;font-weight:bold;">托管服务</span>（字节 Coze）</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">技术人员长期使用</span> → 选<span style="color:#1e6fff;font-weight:bold;">云端自部署</span>（海外 VPS）</p>
+<p style="margin-bottom:25px;text-indent:0;">- <span style="color:#1e6fff;font-weight:bold;">注重隐私/有 NAS</span> → 选<span style="color:#1e6fff;font-weight:bold;">本地部署</span></p>
+<p style="margin-bottom:25px;text-indent:0;">选定方案后，继续看下面的具体安装步骤：</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">04</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">四、安装方式详解（按部署方案）</p>
+<p style="margin-bottom:25px;text-indent:0;">根据你选择的部署方案，选择对应的安装方式。</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">4.1 NPM 全局安装（云端/本地部署推荐）</p>
+<p style="margin-bottom:25px;text-indent:0;">适合<span style="color:#1e6fff;font-weight:bold;">云端自部署</span>和<span style="color:#1e6fff;font-weight:bold;">本地部署</span>用户，一键安装，自动更新。</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 安装 OpenClaw CLI
+npm install -g openclaw
+
+# 验证安装
+openclaw --version</pre>
+<p style="margin-bottom:25px;text-indent:0;">安装完成后，运行初始化命令：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">openclaw setup</pre>
+<p style="margin-bottom:25px;text-indent:0;">这个命令会：</p>
+<p style="margin-bottom:25px;text-indent:0;">- 创建默认配置目录（<code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">~/.openclaw/</code>）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 检查系统依赖</p>
+<p style="margin-bottom:25px;text-indent:0;">- 引导你完成基础配置</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">适用场景</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ 云服务器部署</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ 本地电脑部署</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ NAS 部署</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：简单快速，适合新手</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：版本受限于 npm 仓库更新频率</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">4.2 源码安装（开发者/深度定制）</p>
+<p style="margin-bottom:25px;text-indent:0;">适合想要<span style="color:#1e6fff;font-weight:bold;">深度定制</span>或参与开发的用户。</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 克隆仓库
+git clone https://github.com/openclaw/openclaw.git
+cd openclaw
+
+# 安装依赖
+npm install
+
+# 构建项目
+npm run build
+
+# 链接到全局（可选，便于命令行调用）
+npm link</pre>
+<p style="margin-bottom:25px;text-indent:0;">源码安装后，你可以：</p>
+<p style="margin-bottom:25px;text-indent:0;">- 修改核心代码</p>
+<p style="margin-bottom:25px;text-indent:0;">- 开发自定义插件</p>
+<p style="margin-bottom:25px;text-indent:0;">- 参与社区贡献</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">适用场景</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ 需要修改核心功能</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ 开发自定义插件</p>
+<p style="margin-bottom:25px;text-indent:0;">- ✅ 参与 OpenClaw 开源贡献</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：完全可控，可定制</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：需要手动更新，维护成本较高</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">4.3 Docker 安装（快速体验/隔离环境）</p>
+<p style="margin-bottom:25px;text-indent:0;">适合想快速体验或隔离环境的用户。</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 拉取镜像
+docker pull openclaw/openclaw:latest
+
+# 运行容器
+docker run -it \
+  -v ~/.openclaw:/root/.openclaw \
+  -v $(pwd):/workspace \
+  openclaw/openclaw:latest</pre>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">优点</span>：环境隔离，一键启动</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">缺点</span>：部分系统级功能受限</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">05</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">五、OpenClaw 版本介绍</p>
+<p style="margin-bottom:25px;text-indent:0;">OpenClaw 采用语义化版本控制（Semantic Versioning），版本号格式为：<code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">主版本.次版本.修订号</code></p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">5.1 版本分支说明</p>
+<p style="margin-bottom:25px;text-indent:0;">| 版本类型 | 版本号示例 | 适用场景 |</p>
+<p style="margin-bottom:25px;text-indent:0;">|----------|------------|----------|</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">稳定版</span> | 1.2.3 | 生产环境，追求稳定 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">预览版</span> | 1.3.0-beta.1 | 提前体验新功能 |</p>
+<p style="margin-bottom:25px;text-indent:0;">| <span style="color:#1e6fff;font-weight:bold;">金丝雀版</span> | 1.3.0-canary.20240326 | 测试最前沿功能 |</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">5.2 各版本功能对比</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">OpenClaw 1.0.x</span>（基础版）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 核心 CLI 功能</p>
+<p style="margin-bottom:25px;text-indent:0;">- 基础插件系统</p>
+<p style="margin-bottom:25px;text-indent:0;">- 消息发送能力</p>
+<p style="margin-bottom:25px;text-indent:0;">- 文件操作能力</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">OpenClaw 1.1.x</span>（扩展版）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 浏览器自动化</p>
+<p style="margin-bottom:25px;text-indent:0;">- 画布渲染支持</p>
+<p style="margin-bottom:25px;text-indent:0;">- 子 Agent 系统</p>
+<p style="margin-bottom:25px;text-indent:0;">- 会话管理</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">OpenClaw 1.2.x</span>（当前稳定版）</p>
+<p style="margin-bottom:25px;text-indent:0;">- 飞书/微信/Discord 全渠道支持</p>
+<p style="margin-bottom:25px;text-indent:0;">- 技能市场（Skill Marketplace）</p>
+<p style="margin-bottom:25px;text-indent:0;">- ACP 编程模式</p>
+<p style="margin-bottom:25px;text-indent:0;">- 健康检查系统</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">OpenClaw 1.3.x</span>（预览版）</p>
+<p style="margin-bottom:25px;text-indent:0;">- MCP 服务器集成</p>
+<p style="margin-bottom:25px;text-indent:0;">- 增强的多模态能力</p>
+<p style="margin-bottom:25px;text-indent:0;">- 改进的内存系统</p>
+<p style="margin-bottom:25px;text-indent:0;">- 团队协作功能</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">5.3 版本升级指南</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">NPM 安装用户</span>：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 检查新版本
+npm outdated -g openclaw
+
+# 升级到最新版
+npm update -g openclaw
+
+# 或强制重装最新版
+npm install -g openclaw@latest</pre>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">源码安装用户</span>：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">cd /path/to/openclaw
+git pull origin main
+npm install
+npm run build</pre>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">查看当前版本</span>：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">openclaw --version
+openclaw status</pre>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">06</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">六、初始化与配置</p>
+<p style="margin-bottom:25px;text-indent:0;">安装完成后，需要进行初始配置。</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">6.1 运行配置向导</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">openclaw setup</pre>
+<p style="margin-bottom:25px;text-indent:0;">向导会引导你完成：</p>
+<p style="margin-bottom:25px;text-indent:0;">1. 选择默认 AI 模型</p>
+<p style="margin-bottom:25px;text-indent:0;">2. 配置消息渠道（飞书/微信等）</p>
+<p style="margin-bottom:25px;text-indent:0;">3. 设置工作目录</p>
+<p style="margin-bottom:25px;text-indent:0;">4. 启用/禁用插件</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">6.2 手动配置文件</p>
+<p style="margin-bottom:25px;text-indent:0;">高级用户可以手动编辑配置文件：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 打开配置文件
+nano ~/.openclaw/config.yaml</pre>
+<p style="margin-bottom:25px;text-indent:0;">关键配置项：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># AI 模型配置
+model:
+  default: kimi-coding/kimi-for-coding
+  fallback: openai/gpt-4
+
+# 消息渠道配置
+channels:
+  feishu:
+    enabled: true
+    webhook_url: your-webhook-url
+  
+# 插件配置
+plugins:
+  browser:
+    enabled: true
+  healthcheck:
+    enabled: true</pre>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">6.3 安装推荐插件</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 查看可用插件
+openclaw plugin list
+
+# 安装浏览器插件
+openclaw plugin install browser
+
+# 安装健康检查插件
+openclaw plugin install healthcheck
+
+# 安装 Feishu 插件
+openclaw plugin install feishu</pre>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">07</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">七、常见问题与解决方案</p>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">Q1: 安装时提示权限不足？</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">现象</span>：<code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">EACCES: permission denied</code></p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">解决</span>：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 方法1：修改 npm 全局目录权限
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+echo 'export PATH=~/.npm-global/bin:$PATH' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+
+# 方法2：使用 sudo（不推荐长期使用）
+sudo npm install -g openclaw</pre>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">Q2: 如何切换不同的 AI 模型？</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 临时切换
+openclaw --model openai/gpt-4
+
+# 永久修改默认模型
+openclaw config set model.default openai/gpt-4</pre>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">Q3: 更新后配置丢失？</p>
+<p style="margin-bottom:25px;text-indent:0;">OpenClaw 的配置存储在 <code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">~/.openclaw/</code> 目录，正常情况下更新不会丢失。如遇到：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 备份配置
+cp -r ~/.openclaw ~/.openclaw.backup
+
+# 重新安装后恢复
+cp -r ~/.openclaw.backup/* ~/.openclaw/</pre>
+<p style="font-size:17px;font-weight:bold;color:#1e6fff;margin-top:28px;margin-bottom:12px;">Q4: 如何完全卸载？</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># NPM 方式
+npm uninstall -g openclaw
+rm -rf ~/.openclaw
+
+# 源码方式
+cd /path/to/openclaw
+npm unlink
+rm -rf /path/to/openclaw</pre>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="text-align:center;margin-top:40px;margin-bottom:8px;"><span style="color:#1e6fff;font-size:10px;">●</span></p>
+<p style="text-align:center;font-size:28px;font-weight:bold;color:#1e6fff;margin-bottom:5px;">08</p>
+<p style="text-align:center;font-size:20px;font-weight:bold;color:#1e6fff;margin-bottom:20px;">七、总结与下一步</p>
+<p style="margin-bottom:25px;text-indent:0;">现在，你已经完成了 OpenClaw 的安装和基础配置。</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">回顾我们做了什么</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">1. ✅ 了解了 OpenClaw 的定位和价值</p>
+<p style="margin-bottom:25px;text-indent:0;">2. ✅ 完成了环境准备和安装</p>
+<p style="margin-bottom:25px;text-indent:0;">3. ✅ 理解了版本体系和升级方法</p>
+<p style="margin-bottom:25px;text-indent:0;">4. ✅ 完成了初始配置</p>
+<p style="margin-bottom:25px;text-indent:0;"><span style="color:#1e6fff;font-weight:bold;">下一步建议</span>：</p>
+<p style="margin-bottom:25px;text-indent:0;">1. <span style="color:#1e6fff;font-weight:bold;">阅读官方文档</span>：https://docs.openclaw.ai</p>
+<p style="margin-bottom:25px;text-indent:0;">2. <span style="color:#1e6fff;font-weight:bold;">加入社区</span>：https://discord.com/invite/clawd</p>
+<p style="margin-bottom:25px;text-indent:0;">3. <span style="color:#1e6fff;font-weight:bold;">探索技能市场</span>：https://clawhub.com</p>
+<p style="margin-bottom:25px;text-indent:0;">4. <span style="color:#1e6fff;font-weight:bold;">尝试第一个任务</span>：</p>
+<pre style="background:#f6f8fa;color:#24292e;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">   openclaw run "帮我查一下今天的天气"</pre>
+<p style="margin-bottom:25px;text-indent:0;">OpenClaw 的价值不在于它本身，而在于它能帮你<span style="color:#1e6fff;font-weight:bold;">把想法变成行动</span>。</p>
+<p style="margin-bottom:25px;text-indent:0;">从简单的任务开始，逐步构建你的 AI 自动化工作流。</p>
+<hr style="border:none;border-top:1px dotted #e0e0e0;margin:30px 0;" />
+<p style="margin-bottom:25px;text-indent:0;"><em>本文基于 OpenClaw 1.2.x 稳定版编写</em></p>
+<p style="margin-bottom:25px;text-indent:0;"><em>如有更新，请以官方文档为准</em></p>
+</section>

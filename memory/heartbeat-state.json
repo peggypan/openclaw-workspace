@@ -1,0 +1,22 @@
+{
+  "lastChecks": {
+    "evening_routine": "2026-03-23T19:44:00Z",
+    "morning_routine": "2026-03-23T07:44:00Z",
+    "weekly_routine": "2026-03-22T20:14:00Z",
+    "project_check": "2026-03-23T19:14:00Z"
+  },
+  "dailyLogs": {
+    "2026-03-16": "/root/.openclaw/workspace/memory/daily/2026-03-16.md",
+    "2026-03-17": "/root/.openclaw/workspace/memory/daily/2026-03-17.md",
+    "2026-03-18": "/root/.openclaw/workspace/memory/daily/2026-03-18.md",
+    "2026-03-19": "/root/.openclaw/workspace/memory/daily/2026-03-19.md",
+    "2026-03-20": "/root/.openclaw/workspace/memory/daily/2026-03-20.md",
+    "2026-03-21": "/root/.openclaw/workspace/memory/daily/2026-03-21.md",
+    "2026-03-22": "/root/.openclaw/workspace/memory/daily/2026-03-22/report.md",
+    "2026-03-23": "/root/.openclaw/workspace/memory/daily/2026-03-23/report.md"
+  },
+  "weeklyReport": {
+    "week": "2026-W12",
+    "generatedAt": "2026-03-22T20:14:00Z"
+  }
+}

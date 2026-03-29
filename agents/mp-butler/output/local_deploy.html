@@ -1,0 +1,292 @@
+<section style="font-size:16px;line-height:1.8;color:#333333;font-family:Georgia, 'Noto Serif SC', 'Source Han Serif CN', serif;padding:0 10px;">
+<p style="text-align:center;font-size:24px;font-weight:bold;margin-bottom:30px;">如何本地养虾：OpenClaw 本地部署完整指南</p>
+<blockquote style="border-left:3px solid #c0392b;background:#fdf2f2;padding:18px 22px;border-radius:0 8px 8px 0;margin-bottom:20px;">把 AI 助手养在家里，数据不出家门</blockquote>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="border-left:4px solid #c0392b;padding-left:12px;font-size:20px;font-weight:bold;color:#c0392b;margin-top:45px;margin-bottom:20px;">一、设备选择与准备</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">1.1 可选设备一览</p>
+<p style="margin-bottom:22px;text-indent:2em;">本地养虾的最大优势是利用现有设备，无需额外购买服务器。以下是几种常见的选择：</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">旧电脑或闲置笔记本</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 最低配置：4核 CPU，4GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐配置：4核 CPU，8GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 优点：性能通常最好，有屏幕键盘方便调试，无需额外购买</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 缺点：功耗较高（50-100W），体积大占地方，风扇可能有噪音</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 适用：有闲置电脑，不介意电费，想要最好性能</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">树莓派 4B</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 最低配置：4GB 内存版本</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐配置：8GB 内存版本</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 优点：超低功耗（5-8W），体积小可随意放置，社区生态丰富</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 缺点：性能较弱（ARM 架构），需要散热片，SD 卡容易损坏</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 适用：追求极致省电，轻度使用，喜欢折腾</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 购买建议：主板 600-800 元，加上电源、散热、存储约 1000 元</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">NAS（群晖、威联通）</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 最低配置：4核 CPU，4GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐配置：4核 CPU，8GB+ 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 优点：本来就是 24 小时开机，有完善的备份机制，存储空间大</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 缺点：需要开启 SSH，CPU 性能通常较弱，配置相对复杂</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 适用：已有 NAS，想充分利用现有设备</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 注意：群晖 Docker 部署可能遇到权限问题，建议用虚拟机或 SSH 安装</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">迷你主机（推荐新手）</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 最低配置：Intel N100，4GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐配置：Intel i3，8GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 优点：性价比高（800-1500 元），x86 架构兼容性好，体积小功耗适中（10-20W）</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 缺点：需要额外购买</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 适用：想要平衡性能、功耗、价格的新手</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐型号：零刻 SER5/6 系列、英特尔 NUC、摩方 M600</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">Mac mini</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 最低配置：M1 芯片，8GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 推荐配置：M2 芯片，16GB 内存</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 优点：性能优秀，系统稳定，功耗低</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 缺点：价格较高（3000 元+）</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 适用：已有 Mac mini，或预算充足追求最好体验</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">1.2 功耗与电费估算</p>
+<p style="margin-bottom:22px;text-indent:2em;">设备 24 小时运行的电费（按 0.6 元/度计算）：</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">树莓派 4B</span>：约 5W，月电费约 2 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">迷你主机</span>：约 15W，月电费约 6 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">旧笔记本</span>：约 50W，月电费约 22 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">台式机</span>：约 150W，月电费约 65 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">如果担心电费，推荐树莓派或迷你主机。</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">1.3 系统要求</p>
+<p style="margin-bottom:22px;text-indent:2em;">OpenClaw 支持以下操作系统：</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">Linux</span>：Ubuntu 22.04 LTS（推荐）、Debian 11+、CentOS 8+</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">macOS</span>：macOS 13+（Ventura 或更新）</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">Windows</span>：通过 WSL2（Windows Subsystem for Linux）运行</p>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="border-left:4px solid #c0392b;padding-left:12px;font-size:20px;font-weight:bold;color:#c0392b;margin-top:45px;margin-bottom:20px;">二、macOS 安装指南</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">2.1 安装 Homebrew</p>
+<p style="margin-bottom:22px;text-indent:2em;">Homebrew 是 macOS 上最流行的包管理器。</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 如果还没有安装 Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">2.2 安装 Node.js</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 使用 Homebrew 安装 Node 22
+brew install node@22
+
+# 将 Node 添加到 PATH
+echo 'export PATH="/opt/homebrew/opt/node@22/bin:$PATH"' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+
+# 验证安装
+node --version
+npm --version</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">2.3 安装 OpenClaw</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 全局安装
+npm install -g openclaw
+
+# 验证
+openclaw --version
+
+# 初始化配置
+openclaw setup</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">2.4 配置开机启动</p>
+<p style="margin-bottom:22px;text-indent:2em;">创建 LaunchAgent 配置文件：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;">mkdir -p ~/Library/LaunchAgents
+
+cat &gt; ~/Library/LaunchAgents/com.openclaw.plist &lt;&lt; 'EOF'
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;com.openclaw&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/opt/homebrew/bin/openclaw&lt;/string&gt;
+        &lt;string&gt;gateway&lt;/string&gt;
+        &lt;string&gt;start&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+EOF
+
+# 加载配置
+launchctl load ~/Library/LaunchAgents/com.openclaw.plist
+
+# 查看状态
+launchctl list | grep openclaw</pre>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="border-left:4px solid #c0392b;padding-left:12px;font-size:20px;font-weight:bold;color:#c0392b;margin-top:45px;margin-bottom:20px;">三、Linux 安装指南</p>
+<p style="margin-bottom:22px;text-indent:2em;">适用于 Ubuntu、Debian、CentOS 等 Linux 发行版。</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">3.1 安装 Node.js</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 安装 nvm（Node 版本管理器）
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+# 加载 nvm
+source ~/.bashrc
+
+# 安装 Node.js 22
+nvm install 22
+nvm use 22
+
+# 验证
+node --version
+npm --version</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">3.2 安装 OpenClaw</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 全局安装
+npm install -g openclaw
+
+# 验证
+openclaw --version
+
+# 初始化
+openclaw setup</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">3.3 配置系统服务（推荐）</p>
+<p style="margin-bottom:22px;text-indent:2em;">使用 systemd 让 OpenClaw 作为系统服务运行：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 创建服务文件
+sudo tee /etc/systemd/system/openclaw.service &gt; /dev/null &lt;&lt; 'EOF'
+[Unit]
+Description=OpenClaw Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+Environment="PATH=/home/$USER/.nvm/versions/node/v22.22.0/bin:/usr/local/bin:/usr/bin"
+ExecStart=/home/$USER/.nvm/versions/node/v22.22.0/bin/openclaw gateway start
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# 重新加载 systemd
+sudo systemctl daemon-reload
+
+# 启动服务
+sudo systemctl start openclaw
+
+# 设置开机自启
+sudo systemctl enable openclaw
+
+# 查看状态
+sudo systemctl status openclaw
+
+# 查看日志
+sudo journalctl -u openclaw -f</pre>
+<p style="margin-bottom:22px;text-indent:2em;">常用命令：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 停止服务
+sudo systemctl stop openclaw
+
+# 重启服务
+sudo systemctl restart openclaw
+
+# 查看日志
+sudo journalctl -u openclaw --since "1 hour ago"</pre>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="border-left:4px solid #c0392b;padding-left:12px;font-size:20px;font-weight:bold;color:#c0392b;margin-top:45px;margin-bottom:20px;">四、Windows 安装指南</p>
+<p style="margin-bottom:22px;text-indent:2em;">Windows 不是 OpenClaw 的最佳平台，建议通过 WSL2（Windows Subsystem for Linux）运行。</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">4.1 安装 WSL2</p>
+<p style="margin-bottom:22px;text-indent:2em;">以管理员身份打开 PowerShell，执行：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 安装 WSL
+wsl --install
+
+# 安装完成后重启电脑
+# 然后安装 Ubuntu
+wsl --install -d Ubuntu-22.04</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">4.2 在 WSL 中安装 OpenClaw</p>
+<p style="margin-bottom:22px;text-indent:2em;">重启后，WSL 会自动启动。接下来的步骤与 Linux 完全相同：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 更新系统
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# 安装 Node.js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+source ~/.bashrc
+nvm install 22
+
+# 安装 OpenClaw
+npm install -g openclaw
+openclaw setup</pre>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">4.3 配置开机自动启动 WSL</p>
+<p style="margin-bottom:22px;text-indent:2em;">创建一个批处理文件：</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 创建启动脚本
+@"
+@echo off
+wsl -d Ubuntu-22.04 -u $env:USERNAME bash -c 'source ~/.bashrc &amp;&amp; sudo systemctl start openclaw'
+"@ | Out-File -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\start-openclaw.bat" -Encoding ASCII</pre>
+<p style="margin-bottom:22px;text-indent:2em;">或者手动创建：</p>
+<p style="margin-bottom:22px;text-indent:2em;">1. 打开记事本，输入：<code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">wsl -d Ubuntu-22.04 -u 你的用户名 bash -c 'source ~/.bashrc && sudo systemctl start openclaw'</code></p>
+<p style="margin-bottom:22px;text-indent:2em;">2. 保存到 <code style="background:#f5f5f5;padding:2px 6px;border-radius:3px;font-size:14px;font-family:Consolas,monospace;">%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\start-openclaw.bat</code></p>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="border-left:4px solid #c0392b;padding-left:12px;font-size:20px;font-weight:bold;color:#c0392b;margin-top:45px;margin-bottom:20px;">五、外网访问与费用说明</p>
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">5.1 外网访问方案</p>
+<p style="margin-bottom:22px;text-indent:2em;">本地部署默认只能在局域网内访问。如果需要在外网访问，有以下几种方案：</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">方案 1：Tailscale（强烈推荐）</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">Tailscale 是一个免费的 VPN 工具，可以让你在任何地方安全地访问家里的设备。</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># Linux/macOS 安装
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+
+# Windows 下载安装包安装</pre>
+<p style="margin-bottom:22px;text-indent:2em;">使用步骤：</p>
+<p style="margin-bottom:22px;text-indent:2em;">1. 在家里的设备上安装 Tailscale 并登录</p>
+<p style="margin-bottom:22px;text-indent:2em;">2. 在手机或外出电脑上安装 Tailscale App，登录同一账号</p>
+<p style="margin-bottom:22px;text-indent:2em;">3. 手机就能通过 Tailscale 分配的 IP 访问家里的 OpenClaw</p>
+<p style="margin-bottom:22px;text-indent:2em;">优点：免费、简单、安全，无需公网 IP，无需配置路由器</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">方案 2：Cloudflare Tunnel</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">适合想要绑定自己域名的用户。</p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 下载 cloudflared
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+chmod +x cloudflared
+sudo mv cloudflared /usr/local/bin/
+
+# 登录并创建隧道
+cloudflared tunnel login
+cloudflared tunnel create openclaw
+cloudflared tunnel route dns openclaw yourdomain.com
+cloudflared tunnel run openclaw</pre>
+<p style="margin-bottom:22px;text-indent:2em;">优点：免费，可绑定域名，有访问日志</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">方案 3：frp 内网穿透</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">需要一台有公网 IP 的云服务器做中转，配置较复杂，这里不展开。</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">方案 4：公网 IP</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">最理想的方案，但大部分家庭宽带没有公网 IP，需要联系运营商申请。</p>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">5.2 费用说明</p>
+<p style="margin-bottom:22px;text-indent:2em;">本地养虾的费用构成：</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">固定成本</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- 设备成本：0 元（利用现有设备）</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 电费：2-65 元/月，取决于设备功耗</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">变动成本（AI 模型调用费）</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">- Kimi：约 0.001-0.01 元/千字符</p>
+<p style="margin-bottom:22px;text-indent:2em;">- GPT-4：约 0.1-0.3 元/千字符</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 按实际调用量计费，与部署方式无关</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">使用成本估算</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">轻度使用（每天 100 次调用）：</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 电费：6 元（迷你主机）</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 模型费：约 20 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">总计：约 26 元/月</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">中度使用（每天 1000 次调用）：</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 电费：6 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- 模型费：约 150 元</p>
+<p style="margin-bottom:22px;text-indent:2em;">- <span style="color:#c0392b;font-weight:bold;">总计：约 156 元/月</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">相比云服务器，本地部署的主要优势是固定成本极低，主要花费在模型调用上。</p>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="font-size:17px;font-weight:bold;color:#c0392b;margin-top:30px;margin-bottom:14px;">5.3 数据备份</p>
+<p style="margin-bottom:22px;text-indent:2em;">本地部署的数据安全完全靠自己，务必定期备份：</p>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">手动备份</span></p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 打包配置目录
+tar czf openclaw-backup-$(date +%Y%m%d).tar.gz ~/.openclaw/
+
+# 复制到外部存储（U盘、移动硬盘等）
+cp openclaw-backup-*.tar.gz /mnt/external-drive/</pre>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">自动备份（推荐）</span></p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 创建备份目录
+mkdir -p ~/backups
+
+# 编辑定时任务
+crontab -e
+
+# 添加以下行（每天凌晨 3 点备份，保留 30 天）
+0 3 * * * tar czf ~/backups/openclaw-backup-$(date +\%Y\%m\%d).tar.gz ~/.openclaw/ &amp;&amp; find ~/backups/ -name "openclaw-backup-*.tar.gz" -mtime +30 -delete</pre>
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">云备份（可选）</span></p>
+<pre style="background:#fdf6f0;color:#4a3728;font-size:13px;line-height:1.6;padding:16px 20px;border-radius:6px;overflow-x:auto;margin:20px 0;font-family:Consolas,Monaco,'Courier New',monospace;white-space:pre-wrap;word-wrap:break-word;"># 备份后同步到云盘（以 rclone 为例）
+rclone sync ~/backups/ remote:backup-folder/</pre>
+<hr style="border:none;border-top:1px double #ddd;margin:35px 0;" />
+<p style="margin-bottom:22px;text-indent:2em;"><span style="color:#c0392b;font-weight:bold;">写在最后</span></p>
+<p style="margin-bottom:22px;text-indent:2em;">本地养虾的核心价值是<span style="color:#c0392b;font-weight:bold;">掌控感</span>——数据完全不出家门，想怎么改就怎么改，没有任何限制。</p>
+<p style="margin-bottom:22px;text-indent:2em;">这种掌控感需要付出一些代价：设备要一直开机，外网访问需要配置，维护靠自己。但正是这些折腾，让你更了解这个系统，也让你的 AI 助手真正成为「你的」。</p>
+<p style="margin-bottom:22px;text-indent:2em;">如果你追求隐私、喜欢 DIY、或者单纯想省点钱，本地养虾是一个很好的选择。</p>
+<p style="margin-bottom:22px;text-indent:2em;">祝你的本地龙虾健康成长！🏠🦞</p>
+</section>

@@ -8,6 +8,30 @@
     "frontend-design": {
       "version": "1.0.0",
       "installedAt": 1772687646676
+    },
+    "frontend": {
+      "version": "1.0.2",
+      "installedAt": 1773972710222
+    },
+    "follow-builders": {
+      "version": "0.1.0",
+      "installedAt": 1774186407063
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1774345393899
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1774345407330
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1774345411787
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1774345413931
     }
   }
 }

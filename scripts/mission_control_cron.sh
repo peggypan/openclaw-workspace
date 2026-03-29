@@ -2,6 +2,10 @@
 # Mission Control 定时任务脚本
 # 用法: ./mission_control_cron.sh [morning|evening|weekly]
 
+# 设置 PATH 确保能找到 openclaw（cron 环境不完整）
+export PATH="/root/.nvm/versions/node/v22.22.0/bin:$PATH"
+OPENCLAW_BIN="/root/.nvm/versions/node/v22.22.0/bin/openclaw"
+
 TASK_TYPE=$1
 WORKSPACE_DIR="/root/.openclaw/workspace"
 LOG_FILE="/tmp/mission_control.log"
@@ -70,11 +74,17 @@ EOF
     ;;
 esac
 
-# 尝试发送飞书通知（如果 openclaw 可用）
-if command -v openclaw &> /dev/null; then
+# 尝试发送飞书通知
+if [ -x "$OPENCLAW_BIN" ]; then
     echo "[$DATE] 尝试发送飞书通知..." >> $LOG_FILE
-    # 使用 send_feishu_notify.py 方式或记录到日志
-    echo "[$DATE] 飞书通知内容已保存到: $NOTIFY_FILE" >> $LOG_FILE
+    # 读取通知内容并发送
+    MESSAGE=$(cat "$NOTIFY_FILE")
+    $OPENCLAW_BIN message send --channel feishu --target "oc_f815b8902d22c11ba7f692193bfabe51" -m "$MESSAGE" >> $LOG_FILE 2>&1
+    if [ $? -eq 0 ]; then
+        echo "[$DATE] ✓ 飞书通知发送成功" >> $LOG_FILE
+    else
+        echo "[$DATE] ✗ 飞书通知发送失败" >> $LOG_FILE
+    fi
 else
     echo "[$DATE] openclaw 命令不可用，跳过飞书通知" >> $LOG_FILE
 fi

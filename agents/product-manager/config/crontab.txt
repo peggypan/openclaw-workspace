@@ -1,0 +1,16 @@
+# Crontab 配置
+# 每天早上7:30发送今日综合早报
+
+# 设置环境变量
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+HOME=/root
+
+# 早报任务 - 每天7:30执行
+# 时区: Asia/Shanghai (GMT+8)
+30 7 * * * cd /root/.openclaw/workspace/agents/product-manager && python3 scripts/send_morning_report.py >> /tmp/morning_report.log 2>&1
+
+# 说明:
+# - 30 7 * * * = 每天7:30
+# - 输出日志保存到 /tmp/morning_report.log
+# - 如需测试，手动运行: python3 scripts/send_morning_report.py --test

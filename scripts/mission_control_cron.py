@@ -41,19 +41,25 @@ def send_feishu_message(content):
             with open(temp_file, 'r', encoding='utf-8') as f:
                 message_content = f.read().strip()
             
-            # 使用 -m 参数发送（根据 help 信息）
+            # 使用完整路径调用 openclaw（cron 环境 PATH 不完整）
+            OPENCLAW_BIN = "/root/.nvm/versions/node/v22.22.0/bin/openclaw"
             cmd = [
-                'openclaw', 'message', 'send',
+                OPENCLAW_BIN, 'message', 'send',
                 '--channel', 'feishu',
                 '--target', FEISHU_CHAT_ID,
                 '-m', message_content
             ]
             
+            # 设置完整的环境变量
+            env = os.environ.copy()
+            env['PATH'] = '/root/.nvm/versions/node/v22.22.0/bin:' + env.get('PATH', '')
+            
             result = subprocess.run(
                 cmd,
                 capture_output=True,
                 text=True,
-                timeout=30
+                timeout=30,
+                env=env
             )
             
             if result.returncode == 0:
